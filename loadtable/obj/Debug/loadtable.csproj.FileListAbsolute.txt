@@ -1,0 +1,35 @@
+C:\Users\giampaolo\Documents\Visual Studio 2013\Projects\loadtable\loadtable\bin\Debug\loadtable.exe.config
+C:\Users\giampaolo\Documents\Visual Studio 2013\Projects\loadtable\loadtable\bin\Debug\loadtable.exe
+C:\Users\giampaolo\Documents\Visual Studio 2013\Projects\loadtable\loadtable\bin\Debug\loadtable.pdb
+C:\Users\giampaolo\Documents\Visual Studio 2013\Projects\loadtable\loadtable\obj\Debug\loadtable.Form1.resources
+C:\Users\giampaolo\Documents\Visual Studio 2013\Projects\loadtable\loadtable\obj\Debug\loadtable.Properties.Resources.resources
+C:\Users\giampaolo\Documents\Visual Studio 2013\Projects\loadtable\loadtable\obj\Debug\loadtable.csproj.GenerateResource.Cache
+C:\Users\giampaolo\Documents\Visual Studio 2013\Projects\loadtable\loadtable\obj\Debug\loadtable.exe
+C:\Users\giampaolo\Documents\Visual Studio 2013\Projects\loadtable\loadtable\obj\Debug\loadtable.pdb
+C:\Users\giampaolo\Documents\Visual Studio 2013\Projects\loadtable\loadtable\obj\Debug\loadtable.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Win10\Visual Studio 2015\Projects\loadtable\loadtable\bin\Debug\loadtable.exe.config
+\\Mac\Home\Documents\Win10\Visual Studio 2015\Projects\loadtable\loadtable\obj\Debug\loadtable.exe
+\\Mac\Home\Documents\Win10\Visual Studio 2015\Projects\loadtable\loadtable\obj\Debug\loadtable.pdb
+\\Mac\Home\Documents\Win10\Visual Studio 2015\Projects\loadtable\loadtable\obj\Debug\loadtable.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Win10\Visual Studio 2015\Projects\loadtable\loadtable\obj\Debug\loadtable.Form1.resources
+\\Mac\Home\Documents\Win10\Visual Studio 2015\Projects\loadtable\loadtable\obj\Debug\loadtable.Properties.Resources.resources
+\\Mac\Home\Documents\Win10\Visual Studio 2015\Projects\loadtable\loadtable\obj\Debug\loadtable.csproj.GenerateResource.Cache
+\\Mac\Home\Documents\Win10\Visual Studio 2015\Projects\loadtable\loadtable\bin\Debug\loadtable.exe
+\\Mac\Home\Documents\Win10\Visual Studio 2015\Projects\loadtable\loadtable\bin\Debug\loadtable.pdb
+\\Mac\Home\Documents\Win10\Visual Studio 2015\Projects\loadtable\loadtable\bin\Debug\Teradata.Client.Provider.dll
+\\Mac\Home\Documents\Win10\Visual Studio 2015\Projects\loadtable\loadtable\bin\Debug\Teradata.Client.Provider.xml
+\\Mac\Home\Documents\Win10\Visual Studio 2015\Projects\loadtable\loadtable\bin\Debug\ja\Teradata.Client.Provider.resources.dll
+Y:\OneDrive\VStudio2017\PosteItaliane\loadtable\loadtable\bin\Debug\loadtable.exe.config
+Y:\OneDrive\VStudio2017\PosteItaliane\loadtable\loadtable\bin\Debug\loadtable.exe
+Y:\OneDrive\VStudio2017\PosteItaliane\loadtable\loadtable\bin\Debug\loadtable.pdb
+Y:\OneDrive\VStudio2017\PosteItaliane\loadtable\loadtable\bin\Debug\Teradata.Client.Provider.dll
+Y:\OneDrive\VStudio2017\PosteItaliane\loadtable\loadtable\bin\Debug\Teradata.Client.Provider.xml
+Y:\OneDrive\VStudio2017\PosteItaliane\loadtable\loadtable\bin\Debug\ja\Teradata.Client.Provider.resources.dll
+Y:\OneDrive\VStudio2017\PosteItaliane\loadtable\loadtable\obj\Debug\loadtable.csprojResolveAssemblyReference.cache
+Y:\OneDrive\VStudio2017\PosteItaliane\loadtable\loadtable\obj\Debug\loadtable.Form1.resources
+Y:\OneDrive\VStudio2017\PosteItaliane\loadtable\loadtable\obj\Debug\loadtable.frmLogin.resources
+Y:\OneDrive\VStudio2017\PosteItaliane\loadtable\loadtable\obj\Debug\loadtable.Properties.Resources.resources
+Y:\OneDrive\VStudio2017\PosteItaliane\loadtable\loadtable\obj\Debug\loadtable.csproj.GenerateResource.Cache
+Y:\OneDrive\VStudio2017\PosteItaliane\loadtable\loadtable\obj\Debug\loadtable.csproj.CoreCompileInputs.cache
+Y:\OneDrive\VStudio2017\PosteItaliane\loadtable\loadtable\obj\Debug\loadtable.exe
+Y:\OneDrive\VStudio2017\PosteItaliane\loadtable\loadtable\obj\Debug\loadtable.pdb
