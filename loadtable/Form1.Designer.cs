@@ -183,11 +183,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(187, 137);
+            this.button3.Location = new System.Drawing.Point(2, 148);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 20);
+            this.button3.Size = new System.Drawing.Size(96, 20);
             this.button3.TabIndex = 20;
-            this.button3.Text = "Load";
+            this.button3.Text = "Preview data...";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 

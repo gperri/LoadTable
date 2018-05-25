@@ -45,6 +45,7 @@ namespace loadtable
             string szLine="";
             string[] szFields;
             string[] szHeader;
+      
             szLine = gperead.ReadLine();
             szLine = szLine.Replace("\"", "");
             szHeader = szLine.Split(SEPARATOR);
@@ -54,19 +55,20 @@ namespace loadtable
             int counter = 0;
 
             Teradata.Client.Provider.TdDataAdapter gpeAdapter = new Teradata.Client.Provider.TdDataAdapter(gpeCmd);
-            gpeAdapter.UpdateBatchSize = 100000;
+            gpeAdapter.UpdateBatchSize = 50000;
             
             gpeAdapter.KeepCommandBatchSequence = false;
             Teradata.Client.Provider.TdCommandBuilder cb = new Teradata.Client.Provider.TdCommandBuilder(gpeAdapter);
             DataTable dt = new DataTable();
             gpeAdapter.Fill(dt);
 
+            int iNonBlockingErrors = 0;
             while ((szLine = gperead.ReadLine()) != null) {
-                szLine = szLine.Replace("\"", "");
-                szFields = szLine.Split(SEPARATOR);
+                szFields = szLine.Replace("\"", "").Split(SEPARATOR);
 
                 DataRow dr = dt.NewRow();
                 
+
                 if(szFields.GetUpperBound(0)==szHeader.GetUpperBound(0)) {
                     for (int i = 0; i < szHeader.GetLength(0); i++) {
                         if (szFields[i] == "?")
@@ -77,6 +79,7 @@ namespace loadtable
                             }
                             catch (Exception ex) {
                                 dr[szHeader[i]] = DBNull.Value;
+                                iNonBlockingErrors++;
                             }
                         else if (dr.Table.Columns[szHeader[i]].DataType == typeof(double))
                             dr[szHeader[i]] = Convert.ToDecimal(szFields[i].Trim('\"').Replace('.', ','));
@@ -86,6 +89,7 @@ namespace loadtable
                             }
                             catch (Exception ex) {
                                 dr[szHeader[i]] = DBNull.Value;
+                                iNonBlockingErrors++;
                             }
                     }
 
@@ -94,7 +98,7 @@ namespace loadtable
 
 
 
-                if ((counter++ % 100000) == 0) {
+                if ((counter++ % 50000) == 0) {
                     try {
                         gpeAdapter.Update(dt);
                     }
@@ -102,22 +106,22 @@ namespace loadtable
                         MessageBox.Show(this, ex.Message);
                     }
                     
-                    textBox1.Text = (counter-1).ToString();
+                    textBox1.Text = (counter-1).ToString("###,###");
                 }
 
                 Application.DoEvents();
             }
 
             gpeAdapter.Update(dt);
-            textBox1.Text = counter.ToString();
-            
+            textBox1.Text = counter.ToString("###,###");
+
             dt.Dispose();
             gpeCmd.Dispose();
             mainConn.Close();
             mainConn.Dispose();
             gperead.Close();
             sw.Stop();
-            MessageBox.Show("Done!\n" + sw.Elapsed);
+            MessageBox.Show("Done!\n" + sw.Elapsed + "\nErrors: " + iNonBlockingErrors.ToString("###,###"));
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -206,14 +210,22 @@ namespace loadtable
             Application.Exit();
         }
 
+        private void addColumns(string[] headers)
+        {
+            dgvPreview.Columns.Clear();
+            for (int count = headers.GetLowerBound(0); count < headers.GetLength(0); count++)
+                dgvPreview.Columns.Add(headers[count].ToString(), headers[count].ToString());
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             dgvPreview.Rows.Clear();
-            using (FileStream file = new FileStream(txtFile.Text , FileMode.Open, FileAccess.Read, FileShare.Read, 4096))
-            using (StreamReader reader = new StreamReader(file)) {
-                while (!reader.EndOfStream) {
-                    var fields = reader.ReadLine().Split(',');
-                    if (fields.Length == 2 && (fields[0] != "" || fields[1] != "")) {
+            using (FileStream file = new FileStream(txtFile.Text , FileMode.Open, FileAccess.Read, FileShare.Read, 4096)) {
+                using (StreamReader reader = new StreamReader(file)) {
+                    string [] headerLine= reader.ReadLine().Replace("\"","").Split(SEPARATOR);
+                    addColumns(headerLine);
+                    while (!reader.EndOfStream) {
+                        var fields = reader.ReadLine().Replace("\"", "").Split(SEPARATOR);
                         dgvPreview.Rows.Add(fields);
                     }
                 }
